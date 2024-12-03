@@ -1,0 +1,36 @@
+@font-face {
+    font-family: pqmake;
+    src: url(fonts/MTD\ Bigilla.otf);
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    display: flex;
+}
+.left {
+    width: 500px;
+}
+
+.image{
+    max-width: 500px;
+    width: 100vh;
+    height: 100vh;
+    background-image: url("images/background-makeup.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h1 {
+    color: aliceblue;
+    text-align: center;
+}
