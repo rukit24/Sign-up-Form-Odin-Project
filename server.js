@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname)));
 
 // Serve the HTML file
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "Form.html"));
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // Handle form submissions
