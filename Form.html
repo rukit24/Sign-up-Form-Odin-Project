@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phuong Quynh Makeup</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <main>
         <div class="image">
@@ -14,49 +16,64 @@
                 <h1>Phuong Quynh Makeup</h1>
             </div>
         </div>
-        <div class="text-introduce">
-            <h3>Welcome to our makeup page! Discover the latest trends, tutorials, and product reviews. Whether you're new to makeup or an experienced enthusiast, we provide expert tips and inspiration to help you shine.</h3>
-            <h3>Subscribe now and join our beauty community—let’s explore the art of makeup together!</h3>
-        </div>
-        <form action= "/submit-form" method="post">
-                    <div class="form-container">
-                        <h3>Please Fill In This Form!</h3>
-                        <div class="row">
-                            <div class="input">
-                                <label for="firstname">*First Name:</label>
-                                <input type="text" id="firstname" name ="firstname" placeholder="Please enter your first name" required>
-                            </div>
-                            <div class="input">
-                                <label for="lastname">*Last Name:</label>
-                                <input type="text" id="lastname" name ="lastname" placeholder="Please enter your last name" required>
-                            </div>
+        <div class="content">
+            <div class="text-introduce">
+                <h3>Welcome to our makeup page! Discover the latest trends, tutorials, and product reviews. Whether
+                    you're new to makeup or an experienced enthusiast, we provide expert tips and inspiration to help
+                    you shine.</h3>
+                <h3>Subscribe now and join our beauty community—let’s explore the art of makeup together!</h3>
+            </div>
+            <form action="/submit-form" method="post">
+                <div class="form-container">
+                    <h3>Please Fill In This Form!</h3>
+                    <div class="row">
+                        <div class="input">
+                            <label for="firstname">*First Name:</label>
+                            <input type="text" id="firstname" name="firstname"
+                                placeholder="Please enter your first name" required>
                         </div>
-                                    <div class="row">
-                                        <div class="input">
-                                            <label for="email">Email:</label>
-                                            <input type="email" id="email" name ="email" placeholder="account@domain" >
-                                            <label for="phone-number">Phone Number</label>
-                                            <input type="number" id="phone-number" name ="phone-number" placeholder="eg:0912123453">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input">
-                                            <label for="password">*Password</label>
-                                            <input type="password" id="password" name="password" placeholder="eg:Ab124@h2" pattern="/^[a-zA-Z0-9!@#$%\^\&*_=+-]{8,12}$/g" required>
-                                            <label for="password">*Confirm Password</label>
-                                            <input type="password" id="c-password" name="c-password" placeholder="Re-Enter your Password" pattern="/^[a-zA-Z0-9!@#$%\^\&*_=+-]{8,12}$/g" required>
-                                        </div>
-                                    </div>
-                                    <div class="password-valid">
-                                        <h3>*Create a password between 8-12 characters, including at least 1 uppercase letter, 1 lowercase letter, 1 number, and at least 1 spectial symbols</h3>
-                                    </div>
+                        <div class="input">
+                            <label for="lastname">*Last Name:</label>
+                            <input type="text" id="lastname" name="lastname" placeholder="Please enter your last name"
+                                required>
+                        </div>
                     </div>
-                    <div class="btn-container">
-                        <button class="submit-btn" type="submit">Subscribe</button>
-                        <h3>Already have an account?<a href="#">Log in</a></h3>
+                    <div class="row">
+                        <div class="input">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="account@domain">
+                        </div>
+                        <div class="input">
+                            <label for="phone-number">Phone Number</label>
+                            <input type="number" id="phone-number" name="phone-number" placeholder="eg:0912123453">
+                        </div>
                     </div>
-        </form>
+                    <div class="row">
+                        <div class="input">
+                            <label for="password">*Password</label>
+                            <input type="password" id="password" name="password" placeholder="eg:Ab124@h2"
+                                pattern="/^[a-zA-Z0-9!@#$%\^\&*_=+-]{8,12}$/g" required>
+                        </div>
+                        <div class="input">
+                            <label for="password">*Confirm Password</label>
+                            <input type="password" id="c-password" name="c-password"
+                                placeholder="Re-Enter your Password" pattern="/^[a-zA-Z0-9!@#$%\^\&*_=+-]{8,12}$/g"
+                                required>
+                        </div>
+                    </div>
+                    <div class="password-valid">
+                        <h3>*Create a password between 8-12 characters, including at least 1 uppercase letter, 1
+                            lowercase letter, 1 number, and at least 1 spectial symbols</h3>
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <button class="submit-btn" type="submit">Subscribe</button>
+                    <h3>Already have an account?<a href="#">Log in</a></h3>
+                </div>
+            </form>
+        </div>
     </main>
     <script src="app.js"></script>
 </body>
+
 </html>

@@ -22,9 +22,6 @@ main {
   height: 100vh;
   background-image: url("images/background-makeup.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  flex-direction: column; /* Stack children vertically */
-  justify-content: center; /* Center children vertically */
 }
 
 img {
@@ -47,6 +44,36 @@ h1 {
 }
 
 .logo img {
-    width: 100px; /* Set a custom size for the logo (optional) */
-    margin-bottom: 10px; /* Add spacing between the image and the heading */
+    width: 400px; /* Set a custom size for the logo (optional) */
+    margin-top: 60%;
+    margin-bottom: 0px; /* Add spacing between the image and the heading */
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 100px;
+}
+
+.text-introduce, .btn-container {
+  padding-left: 30px;
+}
+
+.form-container {
+display: flex;
+flex-direction: column;
+gap:20px;
+box-shadow: 10px 5px 5px lightgray;
+padding: 5px 10px 30px 40px;
+}
+
+.row {
+  display: flex;
+  gap: 50px;
+}
+.input {
+  display: flex;
+  flex-direction: column;
 }
