@@ -11,13 +11,11 @@ body {
 
 main {
   display: flex;
-}
-.left {
-  width: 500px;
+  background-color: white;
 }
 
 .image {
-  max-width: 500px;
+  max-width: 40%;
   width: 100vh;
   height: 100vh;
   background-image: url("images/background-makeup.jpg");
@@ -32,21 +30,18 @@ img {
 h1 {
   color: aliceblue;
   text-align: center;
+  font-size: 50px;
 }
 
 .logo {
-    display: flex; /* Enable Flexbox */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center children vertically */
-    align-items: center; /* Center children horizontally */
-    height: 200px; /* Set a height for the container (adjust as needed) */
-    text-align: center; /* Center align text for <h1> */
-}
-
-.logo img {
-    width: 400px; /* Set a custom size for the logo (optional) */
-    margin-top: 60%;
-    margin-bottom: 0px; /* Add spacing between the image and the heading */
+  background-color: rgba(0, 0, 0, 0.582);
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 100px;
 }
 
 .content {
@@ -54,26 +49,110 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 100px;
+  gap: 50px;
+  background-color: rgb(245, 245, 245);
 }
 
-.text-introduce, .btn-container {
+.text-introduce,
+.btn-container {
   padding-left: 30px;
 }
 
 .form-container {
-display: flex;
-flex-direction: column;
-gap:20px;
-box-shadow: 10px 5px 5px lightgray;
-padding: 5px 10px 30px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 10px 5px 5px rgb(66, 63, 63);
+  padding: 5px 10px 30px 40px;
+  background-color: white;
 }
 
 .row {
   display: flex;
-  gap: 50px;
+  gap: 100px;
 }
+
 .input {
   display: flex;
   flex-direction: column;
+  gap: 5px;
+
+}
+
+input {
+  width: 300px;
+  text-align: left;
+  font-size: 20px;
+  border-style: outset;
+  border-width: 2px;
+  border-color: lightgrey;
+  border-radius: 5px;
+  padding: 10px 10px 5px 3px;
+  background-color: white;
+  transition: border-color 0.3s ease;
+}
+
+input::placeholder {
+  font-size: 0.9em;
+  /* Adjust font size */
+  color: dimgray;
+  /* Optional, for better visibility */
+}
+
+label {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+button {
+  margin-top: 30px;
+  margin-left: 20px;
+  font-size: 20px;
+  color: aliceblue;
+  background-color: #596D48;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.password-valid {
+  color: crimson;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+input:focus {
+  border: 2px solid blue;
+  /* Viền màu xanh khi focus */
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+  /* Hiệu ứng đổ bóng */
+}
+
+/* Trạng thái valid */
+input.valid {
+  border: 2px solid green;
+  /* Viền xanh khi input hợp lệ */
+}
+
+/* Trạng thái invalid */
+input.invalid {
+  border: 2px solid red;
+  /* Viền đỏ khi input không hợp lệ */
+}
+
+.password-error {
+  position: absolute;
+  /* Position the error message relative to the input */
+  top: 100%;
+  /* Place it directly below the input box */
+  left: 0;
+  /* Align it with the input's left edge */
+  margin-top: 5px;
+  /* Small space between input and error */
+  font-size: 0.9rem;
+  /* Adjust font size for better visibility */
+  color: crimson;
+  /* Set error color */
 }
