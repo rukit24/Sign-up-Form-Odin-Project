@@ -42,6 +42,7 @@ h1 {
   justify-content: center;
   text-align: center;
   margin-top: 100px;
+  transition: all 0.3s ease-in-out;
 }
 
 .content {
@@ -62,7 +63,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  box-shadow: 10px 5px 5px rgb(66, 63, 63);
+  box-shadow: 10px 7px 5px rgb(99, 95, 95);
   padding: 5px 10px 30px 40px;
   background-color: white;
 }
@@ -104,6 +105,36 @@ label {
   font-weight: 500;
 }
 
+.password-valid {
+  color: crimson;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+input:focus {
+  border: 2px solid blue;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+}
+
+input.valid {
+  border: 2px solid green;
+}
+
+/* invalid */
+input.invalid {
+  border: 2px solid red;
+}
+
+.password-error {
+  position: absolute;
+  /* Position the error message relative to the input */
+  top: 100%;
+  left: 0;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: crimson;
+}
 button {
   margin-top: 30px;
   margin-left: 20px;
@@ -114,45 +145,56 @@ button {
   border: none;
   border-radius: 5px;
   font-weight: 500;
+  transition: all 0.3s ease-in-out;
 }
 
-.password-valid {
-  color: crimson;
-  font-size: 15px;
-  font-weight: 300;
+button:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #596D48, #8BAA6A);
+  text-shadow: 0 0 5px #ffffff, 0 0 5px #ffffff, 0 0 5px #ffffff;
+  border: 2px solid #8BAA6A;
+  box-shadow: 0 0 10px #8BAA6A, 0 0 20px #8BAA6A;
+  cursor: pointer;
 }
 
-input:focus {
-  border: 2px solid blue;
-  /* Viền màu xanh khi focus */
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
-  /* Hiệu ứng đổ bóng */
+.logo:hover {
+  background-color: rgba(0, 0, 0, 0.9); /* Darken the background */
+  opacity: 1; /* Fully visible */
+  transform: scale(1.05); /* Slightly scale up the logo div */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+  cursor: pointer; /* Change cursor to pointer */
+}
+/* Add hover effect to text inside the logo */
+.logo h1, .logo img {
+  transition: all 0.3s ease-in-out; /* Smooth text/image animation */
 }
 
-/* Trạng thái valid */
-input.valid {
-  border: 2px solid green;
-  /* Viền xanh khi input hợp lệ */
+
+/* Strength Meter styles */
+.strength-meter {
+  margin-top: 10px;
+  height: 10px;
+  width: 100%;
+  background-color: #e0e0e0; /* Neutral background */
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
 }
 
-/* Trạng thái invalid */
-input.invalid {
-  border: 2px solid red;
-  /* Viền đỏ khi input không hợp lệ */
+.strength-bar {
+  height: 100%;
+  width: 0%; /* Default width */
+  background-color: red; /* Weak by default */
+  transition: width 0.3s ease, background-color 0.3s ease;
 }
 
-.password-error {
-  position: absolute;
-  /* Position the error message relative to the input */
-  top: 100%;
-  /* Place it directly below the input box */
-  left: 0;
-  /* Align it with the input's left edge */
+#strength-text {
   margin-top: 5px;
-  /* Small space between input and error */
-  font-size: 0.9rem;
-  /* Adjust font size for better visibility */
-  color: crimson;
-  /* Set error color */
+  font-size: 1rem;
+  color: #666; /* Default color */
+  text-align: left;
+}
+
+.hide {
+  display: none !important;;
 }

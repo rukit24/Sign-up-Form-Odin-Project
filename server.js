@@ -1,20 +1,18 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const port = 5500;
+const port = 3000;
 
 // Middleware to parse form data
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// Serve static files for CSS, images, fonts, and JS
+app.use(express.static(path.join(__dirname)));
+
 // Serve the HTML file
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "Form.html"));
-});
-
-// Serve the CSS file
-app.get("/styles.css", (req, res) => {
-  res.sendFile(path.join(__dirname, "styles.css"));
 });
 
 // Handle form submissions
