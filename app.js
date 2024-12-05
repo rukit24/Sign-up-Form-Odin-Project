@@ -23,7 +23,7 @@ form.addEventListener("submit", (event) => {
 });
 
 
-// Dynamic input border color base on the action of user on inputting (none/valid/invalid)
+// Dynamic input border color base on the action  of user on inputting (none/valid/invalid)
 inputs.forEach((input) => {
   input.addEventListener("input", () => {
     if (input.value.trim() === "") {
