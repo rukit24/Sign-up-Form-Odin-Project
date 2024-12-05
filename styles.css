@@ -128,7 +128,6 @@ input.invalid {
 
 .password-error {
   position: absolute;
-  /* Position the error message relative to the input */
   top: 100%;
   left: 0;
   margin-top: 5px;
@@ -196,5 +195,5 @@ button:hover {
 }
 
 .hide {
-  display: none !important;;
+  display: none;
 }
