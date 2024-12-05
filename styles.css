@@ -1,3 +1,7 @@
+:root{
+  --green-olive: #596D48;
+  --green-sage: #8BAA6A;
+}
 @font-face {
   font-family: pqmake;
   src: url(fonts/MTD\ Bigilla.otf);
@@ -139,7 +143,7 @@ button {
   margin-left: 20px;
   font-size: 20px;
   color: aliceblue;
-  background-color: #596D48;
+  background-color: var(--green-olive);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -149,10 +153,10 @@ button {
 
 button:hover {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(45deg, #596D48, #8BAA6A);
+  background: linear-gradient(45deg, var(--green-olive), var(--green-sage));
   text-shadow: 0 0 5px #ffffff, 0 0 5px #ffffff, 0 0 5px #ffffff;
-  border: 2px solid #8BAA6A;
-  box-shadow: 0 0 10px #8BAA6A, 0 0 20px #8BAA6A;
+  border: 2px solid var(--green-sage);
+  box-shadow: 0 0 10px var(--green-sage), 0 0 20px var(--green-sage);
   cursor: pointer;
 }
 
