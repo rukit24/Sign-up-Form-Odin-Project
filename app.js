@@ -8,12 +8,15 @@ const strengthBar = document.getElementById("strength-bar");
 const strengthText = document.getElementById("strength-text");
 const inputs = document.querySelectorAll("input");
 confirmPasswordInput.addEventListener("input", () => {
-  if (confirmPasswordInput.value !== passwordInput.value) {
-    passwordError.style.display = "block";
+  if (confirmPasswordInput.value === '') {
+    passwordError.classList.add('hide');
   } else {
-    passwordError.style.display = "none";
+  if (confirmPasswordInput.value !== passwordInput.value) {
+    passwordError.classList.remove("hide");
+  } else {
+    passwordError.classList.add('hide');
   }
-});
+}});
 
 form.addEventListener("submit", (event) => {
   if (confirmPasswordInput.value !== passwordInput.value) {
